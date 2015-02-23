@@ -1,0 +1,16 @@
+<h1>Authors#edit</h1>
+
+<%= form_for @author do |x| %>
+
+  <%= x.label :first %>
+  <%= x.text_field :first_name, autofocus: true %>
+
+  <%= x.label :last %>
+  <%= x.text_field :last_name %>
+
+  <%= x.label :age %>
+  <%= x.text_field :age %>
+
+  <%= x.submit %>
+ 
+<% end %>

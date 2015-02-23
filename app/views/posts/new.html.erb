@@ -1,0 +1,31 @@
+<% if @post.errors.any? %>
+<% @post.errors.full_messages.each do |error| %>
+<p class="text-danger">
+<%= error %>
+</p>
+<% end %>
+<% end %>
+
+<% if @author.errors.any? %>
+<% @author.errors.full_messages.each do |error| %>
+<p class="text-danger">
+<% error %>
+</p>
+<% end %>
+<% end %>
+
+
+<%= form_for [@author, @post] do |x| %>
+
+  <%= x.label :title %>
+  <%= x.text_field :title, :placeholder => "title", autofocus: true %>
+
+  <%= x.label :body %>
+  <%= x.text_field :body, :placeholder => "Body" %>
+
+  <%= x.label :category %>
+  <%= x.text_field :category, :placeholder => "category" %>
+
+  <%= x.submit %>
+ 
+<% end %>

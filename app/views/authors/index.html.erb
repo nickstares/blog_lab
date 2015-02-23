@@ -1,0 +1,19 @@
+<h1>these are the authors</h1>
+
+<% @authors.each do |author| %>
+<ul>
+<li>
+<%= author.first_name %> 
+<%= author.last_name %>
+<%= author.age %>
+<%= link_to "show", author_path(author) %>
+
+<%= link_to "edit", edit_author_path(author) %>
+<%= link_to 'Destroy', author, method: :delete %>
+</li>
+</ul>
+
+<% end %>
+
+<%= link_to "new", new_author_path %>
+

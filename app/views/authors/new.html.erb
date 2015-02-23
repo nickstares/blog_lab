@@ -1,0 +1,16 @@
+
+
+<%= form_for @author do |x| %>
+
+  <%= x.label :first %>
+  <%= x.text_field :first_name, :placeholder => "James", autofocus: true %>
+
+  <%= x.label :last %>
+  <%= x.text_field :last_name, :placeholder => "Joyce" %>
+
+  <%= x.label :age %>
+  <%= x.text_field :age, :placeholder => "33" %>
+
+  <%= x.submit %>
+ 
+<% end %>

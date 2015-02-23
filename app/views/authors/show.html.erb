@@ -1,0 +1,9 @@
+<h1> here is the author </h1>
+<p>
+<%= @author.first_name %> 
+<%= @author.last_name %>
+<%= @author.age %>
+</p>
+<%= @posts %>
+<%= link_to "new post", new_author_post_path(@author) %>
+<%= link_to "posts by this author", author_posts_path(@author) %>

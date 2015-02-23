@@ -1,0 +1,10 @@
+<h1>Posts#index</h1>
+<% @posts.each do |post| %>
+<p>
+<%= post.title %>
+<%= post.body %>
+<%= post.category %>
+<%= link_to "edit post", edit_post_path(post) %>
+<%= link_to 'Destroy', post, method: "delete" %>
+</p>
+<% end %>

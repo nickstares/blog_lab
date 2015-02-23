@@ -1,0 +1,14 @@
+<h1>Posts#edit</h1>
+<%= form_for [@author, @post],  url: "/posts/#{@post.id}", method: "PUT" do |x| %>
+
+  <%= x.label :title %>
+  <%= x.text_field :title, :placeholder => "title", autofocus: true %>
+
+  <%= x.label :body %>
+  <%= x.text_field :body, :placeholder => "Body" %>
+
+  <%= x.label :category %>
+  <%= x.text_field :category, :placeholder => "category" %>
+
+  <%= x.submit %>
+  <% end %>
